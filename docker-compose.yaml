@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  flask:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    restart: always
+
+    ports:
+      - 19000:5000
+    volumes:
+      - .:/app
